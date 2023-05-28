@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Nanum Gothic';
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  width: 70rem;
+  margin: auto;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+  user-select: none;
+}
+
+.header h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 0.4rem;
+  color: #f79f1f;
+}
+
+.header button {
+  width: 12rem;
+  padding: 0.8rem 0rem;
+  margin-top: 3rem;
+  background-color: #ffc312;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  user-select: none;
+}
+
+.header button:hover {
+  transform: scale(1.1);
+}
+
+.main {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+}
+
+.game-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  perspective: 1100px;
+}
+
+.card {
+  width: 100%;
+  height: 119px;
+  position: relative;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #ffeb3b;
+  background-image: url('./imgs/card-icon.png');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: #ffeb3b 5px solid;
+  border-radius: 10px;
+}
+
+.back {
+  background-size: covers;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: transparent 1px solid;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+.startImg {
+  margin: auto;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+  user-select: none;
+}
+
+.footer span {
+  font-size: 2rem;
+}
+
+.footer .leftTime,
+.footer .leftCard {
+  font-weight: 600;
+  color: #f79f1f;
+  font-size: 4rem;
+}
+
+.success {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #27ae60;
+  letter-spacing: 1rem;
+}
+
+.fail {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #e74c3c;
+  letter-spacing: 1rem;
+}
+
+.done {
+  width: 100%;
+  height: 119px;
+  cursor: pointer;
+  border: #27ae60 5px solid;
+}
